@@ -8,6 +8,7 @@ pub struct ExtensionMetadata {
     pub category: Option<String>,
     pub author: String,
     pub version: String,
+    pub data: Vec<String>,
     pub depends_on: Vec<String>,
     pub application: bool,
 }
