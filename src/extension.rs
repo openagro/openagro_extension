@@ -1,15 +1,18 @@
 use serde::{Deserialize, Serialize};
 
+use crate::assets::Assets;
+
 /// # Extension Metadata
 /// 
 /// Struct type to define extension as a openagro extension
 /// and specify extension metadata.
 /// 
-/// **Example:** 
+/// **Example :** 
 /// 
+/// Put this pice of code on your `src/lib.rs`
 /// 
 /// ```
-/// func metadata() -> ExtensionMetadata {
+/// pub func metadata() -> ExtensionMetadata {
 ///     ExtensionMetadata {
 ///         extension_id: "openagro.your.extension.name".to_string(),
 ///         name: "Your Extension Name".to_string(),
@@ -38,7 +41,7 @@ pub struct ExtensionMetadata {
     pub category: Option<String>,
     pub author: String,
     pub version: String,
-    pub data: Vec<String>,
+    pub data: Vec<Assets>,
     pub depends_on: Vec<String>,
     pub application: bool,
 }
