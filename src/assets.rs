@@ -10,6 +10,7 @@ pub enum AssetType {
     Javascript = 0,
     Css = 1,
     Views = 2,
+    Data = 3,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
